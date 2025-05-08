@@ -18,5 +18,7 @@
   </properties>
   <modules>
     <module>taco-cloud-resource</module>
+    <module>authorization-server</module>
+      <module>default-authorization-server</module>
   </modules>
 </project>

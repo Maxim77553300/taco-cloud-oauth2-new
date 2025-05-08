@@ -1,0 +1,39 @@
+spring:
+  application:
+    name: authorization-server
+  datasource:
+    url: jdbc:h2:mem:tacocloud
+    username: sa
+    password:
+    driverClassName: org.h2.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    defer-datasource-initialization: true
+  sql:
+    init:
+      mode: always
+
+logging:
+  level:
+    root: DEBUG
+    org:
+      springframework:
+        security: INFO
+    tacos: DEBUG
+
+  file:
+    name: logs/TacoCloud.log
+  config: classpath:logback.xml
+taco:
+  orders:
+    page-size: 10
+
+#    url: jdbc:postgresql://localhost:5432/tacocloud
+#    username: postgres
+#    password: 77553300
+#    driver-class-name: org.postgresql.Driver
+#  jpa:
+#    properties:
+#      hibernate:
+#        dialect: org.hibernate.dialect.PostgreSQLDialect
+#        format-sql: true
